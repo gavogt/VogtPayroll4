@@ -11,20 +11,9 @@ namespace VogtPayroll4
 
         public List<Employee> ReadEmployees()
         {
-            string path = @"c:\Documents\MyTest.txt";
-            string line;
-            StreamReader file = new StreamReader(@"C:\Users\Gabriel\source\repos\VogtPayroll4\MyTest.txt");
-            employees = new List<Employee>();
+            PayrollConsoleReader payrollConsoleReader = new PayrollConsoleReader();
 
-            while ((line = file.ReadLine()) != null)
-            {
-
-                string[] employeeProperties = line.Split(',');
-                Employee emp = new Employee(employeeProperties[0], int.Parse(employeeProperties[1]), int.Parse(employeeProperties[2]), int.Parse(employeeProperties[3]));
-                employees.Add(emp);
-            }
-
-            return employees;
+            return payrollConsoleReader.CreateNewEmployee();
         }
 
         public void LoopThroughEmployeesList(List<Employee> employees)
