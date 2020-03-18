@@ -20,7 +20,7 @@ namespace VogtPayroll4
             {
 
                 string[] employeeProperties = line.Split(',');
-                Employee emp = new Employee(employeeProperties[0], employeeProperties[1], employeeProperties[2], employeeProperties[3]);
+                Employee emp = new Employee(employeeProperties[0], int.Parse(employeeProperties[1]), int.Parse(employeeProperties[2]), int.Parse(employeeProperties[3]));
                 employees.Add(emp);
             }
 
