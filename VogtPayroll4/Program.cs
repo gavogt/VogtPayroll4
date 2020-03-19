@@ -15,7 +15,8 @@ namespace VogtPayroll4
             EmployeePayrollFileReader employeePayrollFileReader = new EmployeePayrollFileReader();
 
             empList = employeePayrollFileReader.ReadEmployeesFromFile();
-            payroll.PrintAllEmployeeInfo(empList);
+            payroll.AddEmployees(empList);
+            payroll.PrintAllEmployeeInfo();
 
         }
 

@@ -7,9 +7,14 @@ namespace VogtPayroll4
 {
     class Payroll
     {
-        private List<Employee> _employees;
+        private List<Employee> _employees = new List<Employee>();
 
-        public void PrintAllEmployeeInfo(List<Employee> _employees)
+        #region PrintAllEmployeeInfo
+        /// <summary>
+        /// Prints all employee information
+        /// </summary>
+        /// <param name="_employees">The employee passed in</param>
+        public void PrintAllEmployeeInfo()
         {
             foreach (var employee in _employees)
             {
@@ -22,5 +27,18 @@ namespace VogtPayroll4
 
             }
         }
+        #endregion
+
+        #region AddEmployees
+        /// <summary>
+        /// Adds an employee list to private variable employees
+        /// </summary>
+        /// <param name="employees">Employee list to pass in</param>
+        public void AddEmployees(List<Employee> employees)
+        {
+            _employees.AddRange(employees);
+        }
+        #endregion
+
     }
 }

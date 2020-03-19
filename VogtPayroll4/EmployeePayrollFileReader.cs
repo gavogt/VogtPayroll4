@@ -7,6 +7,12 @@ namespace VogtPayroll4
 {
     class EmployeePayrollFileReader
     {
+
+        #region ReadEmployeesFromFile
+        /// <summary>
+        /// Reads employees from File
+        /// </summary>
+        /// <returns>A list of employees</returns>
         public List<Employee> ReadEmployeesFromFile()
         {
 
@@ -24,5 +30,6 @@ namespace VogtPayroll4
             return employees;
 
         }
+        #endregion
     }
 }
