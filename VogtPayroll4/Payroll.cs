@@ -11,9 +11,9 @@ namespace VogtPayroll4
 
         public List<Employee> ReadEmployees()
         {
-            PayrollConsoleReader payrollConsoleReader = new PayrollConsoleReader();
+            EmployeePayrollConsoleReader EmployeePayrollConsoleReader = new EmployeePayrollConsoleReader();
 
-            return payrollConsoleReader.CreateNewEmployee();
+            return EmployeePayrollConsoleReader.CreateNewEmployee();
         }
 
         public void LoopThroughEmployeesList(List<Employee> employees)

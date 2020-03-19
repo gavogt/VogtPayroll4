@@ -5,7 +5,7 @@ using System.IO;
 
 namespace VogtPayroll4
 {
-    class PayrollConsoleReader
+    class EmployeePayrollConsoleReader
     {
         public List<Employee> CreateNewEmployee()
         {
