@@ -7,34 +7,20 @@ namespace VogtPayroll4
 {
     class Payroll
     {
-        public List<Employee> employees;
+        private List<Employee> _employees;
 
-        public List<Employee> ReadEmployees()
+        public void PrintAllEmployeeInfo(List<Employee> _employees)
         {
-            EmployeePayrollConsoleReader EmployeePayrollConsoleReader = new EmployeePayrollConsoleReader();
-
-            return EmployeePayrollConsoleReader.CreateNewEmployee();
-        }
-
-        public void LoopThroughEmployeesList(List<Employee> employees)
-        {
-            foreach (var employee in employees)
+            foreach (var employee in _employees)
             {
                 Console.WriteLine(" ");
                 Console.WriteLine("Employee name: " + employee.empName);
                 Console.WriteLine("Employee ID:" + employee.empID);
                 Console.WriteLine($"Employee hourly rate: {employee.hourlyRate:C2}");
                 Console.WriteLine("Employee hours worked: " + employee.hoursWorked);
-                Console.WriteLine($"Employee gross pay: {CalculateGrossPay(employee):C2}");
+                Console.WriteLine($"Employee gross pay: {employee.CalculateGrossPay(employee):C2}");
 
             }
-        }
-
-        public int CalculateGrossPay(Employee emp)
-        {
-            
-            return (Convert.ToInt32(emp.hourlyRate) * Convert.ToInt32(emp.hoursWorked));
-
         }
     }
 }

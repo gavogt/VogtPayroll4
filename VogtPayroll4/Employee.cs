@@ -19,6 +19,13 @@ namespace VogtPayroll4
             this.hoursWorked = hoursWorked;
 
         }
+
+        public int CalculateGrossPay(Employee emp)
+        {
+
+            return (Convert.ToInt32(emp.hourlyRate) * Convert.ToInt32(emp.hoursWorked));
+
+        }
     }
 
 }
